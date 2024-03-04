@@ -27,30 +27,39 @@
           font-family: 'Rubik', sans-serif;
         }
         .container-fluid {
-          @apply w-full h-screen px-20;
+          @apply w-full h-screen px-3 sm:px-20;
         }
       }
     </style>
   </head>
   <body>
-    <main>
-      <div class="container-fluid grid grid-rows-[auto_1fr] py-6">
-        <header class="py-5">
-          <div class="flex justify-between items-center w-full">
-            <div class="flex items-center space-x-1.5">
-              <img src="./images/Logo.png" alt="Logo" class="h-10 w-10" />
-              <h3 class="text-xl text-[#0B132]">
-                Lasles<span class="font-bold">VPN</span>
-              </h3>
+    <main class="h-screen">
+      <div class="h-full sm:container-fluid grid grid-rows-[auto_1fr] sm:py-6">
+        <header>
+          <div
+            class="relative flex flex-col p-3 space-y-4 sm:flex-row sm:justify-between sm:items-center sm:space-y-0 sm:p-0"
+          >
+            <div class="flex justify-between items-center">
+              <div class="flex items-center space-x-1.5">
+                <img src="./images/Logo.png" alt="Logo" class="h-10 w-10" />
+                <h3 class="text-xl text-[#0B132]">
+                  Lasles<span class="font-bold">VPN</span>
+                </h3>
+              </div>
+              <div class="menu sm:hidden text-2xl">☰</div>
             </div>
-            <ul class="flex items-center space-x-10 text-slate-500 text-lg">
+            <ul
+              class="mobile hidden pt-4 space-y-5 text-slate-600 text-xl sm:flex sm:flex-row sm:items-center sm:space-y-0 sm:space-x-10 sm:text-lg sm:pt-0"
+            >
               <li>About</li>
               <li>Features</li>
               <li>Pricing</li>
               <li>Testimonials</li>
               <li>Help</li>
             </ul>
-            <div class="flex items-center space-x-6">
+            <div
+              class="mobile hidden sm:flex items-center space-x-6 py-4 sm:py-0"
+            >
               <button class="text-md font-bold">Sign In</button>
               <button
                 class="text-md px-10 py-2 border border-primary rounded-3xl text-red-600"
@@ -60,33 +69,42 @@
             </div>
           </div>
         </header>
-        <section class="grid grid-cols-2 gap-8">
+        <section
+          class="px-3 grid grid-cols-1 content-center space-y-14 sm:grid-cols-2 sm:gap-8 sm:space-y-0 sm:px-0"
+        >
           <div class="grid content-center">
             <div class="mb-8">
-              <h3 class="text-[#0B132A] font-semibold text-5xl leading-[4rem]">
+              <h3
+                class="text-[#0B132A] font-semibold text-2xl leading-10 sm:text-5xl sm:leading-[4rem]"
+              >
                 Want anything to be <br />easy with
                 <span class="font-bold">LaslesVPN.</span>
               </h3>
             </div>
-            <p class="text-md text-slate-500 leading-7">
+            <p class="text-md text-slate-600 leading-7">
               Provide a network for all your needs with ease and fun using
               LaslesVPN <br />
               discover interesting features from us.
             </p>
             <button
-              class="mt-12 bg-primary w-fit px-20 py-5 rounded-lg shadow-2xl shadow-primary/60"
+              class="hidden sm:block sm:mt-12 bg-primary w-fit px-20 py-5 rounded-lg shadow-2xl shadow-primary/60"
             >
               Get Started
             </button>
           </div>
           <div class="grid place-content-center">
             <img src="./images/Illustration 1.jpg" />
+            <button
+              class="sm:hidden mt-12 bg-primary w-fit px-20 py-5 rounded-lg shadow-2xl shadow-primary/60"
+            >
+              Get Started
+            </button>
           </div>
         </section>
       </div>
-      <div class="px-20">
+      <div class="px-3 sm:px-20">
         <div
-          class="grid grid-cols-3 divide-x border rounded-md bg-white shadow-2xl shadow-black/20 px-10 py-8 [&>div]:flex [&>div]:space-x-10 [&>div]:items-center [&>div]:justify-center [&>div]:p-5"
+          class="grid grid-cols-1 divide-y sm:divide-y-0 sm:grid-cols-3 sm:divide-x border rounded-md bg-white shadow-2xl shadow-black/20 px-10 py-8 [&>div]:flex [&>div]:space-x-10 [&>div]:p-5 sm:[&>div]:items-center sm:[&>div]:justify-center"
         >
           <div>
             <div class="p-5 bg-primary/20 rounded-full">
@@ -117,19 +135,22 @@
           </div>
         </div>
       </div>
-      <section class="container-fluid grid grid-cols-2">
+      <section class="container-fluid grid grid-cols-1 sm:grid-cols-2">
         <div class="grid place-content-center">
           <img src="./images/Illustration 2.png" />
         </div>
         <div class="grid place-content-center">
           <div class="mb-6">
-            <h3 class="text-[#0B132A] font-semibold text-4xl leading-[3rem]">
+            <h3
+              class="text-[#0B132A] font-semibold text-2xl leading-10 sm:text-4xl sm:leading-[3rem]"
+            >
               We provide many <br />
               <span class="font-bold">Features you can use</span>
             </h3>
           </div>
           <p class="text-md text-slate-500 leading-7">
-            You can explore the features that we provide with fun and <br />
+            You can explore the features that we provide with fun and
+            <br class="hidden sm:block" />
             have their own functions each feature.
           </p>
           <div
@@ -155,7 +176,7 @@
         </div>
       </section>
       <section class="container-fluid bg-gray-50 h-auto">
-        <div class="w-full max-w-xl mx-auto text-center py-14">
+        <div class="w-full max-w-xl mx-auto sm:text-center py-14">
           <h3 class="text-4xl font-medium capitalize">Choose your plan</h3>
           <p class="text-gray-500 mt-5">
             Let's choose the package that is best for you and explore it happily
@@ -163,7 +184,7 @@
           </p>
         </div>
         <div
-          class="grid grid-cols-3 gap-10 [&>div]:py-10 [&>div]:grid [&>div]:grid-rows-[auto_1fr_auto]"
+          class="grid sm:grid-cols-3 gap-10 [&>div]:py-10 [&>div]:grid [&>div]:grid-rows-[auto_1fr_auto]"
         >
           <div class="bg-white border-2 border-gray-300 rounded-lg">
             <img src="./images/Free.jpg" alt="Free" class="mx-auto" />
@@ -286,15 +307,15 @@
       <section
         class="container-fluid h-auto bg-gray-50 grid grid-rows-[auto_1fr_auto]"
       >
-        <div class="mt-28">
+        <div class="mt-14 sm:mt-28">
           <h3
-            class="text-4xl text-center capitalize font-medium w-full max-w-md mx-auto"
+            class="text-2xl sm:text-4xl sm:text-center capitalize font-medium w-full max-w-md mx-auto"
           >
             Huge global network <br />
             of fast VPN
           </h3>
           <p
-            class="text-gray-500 text-base text-center w-full max-w-lg mx-auto py-5"
+            class="text-gray-500 text-base sm:text-center w-full max-w-lg mx-auto py-5"
           >
             See <span class="font-bold">LaslesVPN</span> everywhere to make it
             easier for you when you move locations.
@@ -303,7 +324,7 @@
         <img
           src="./images/Huge Global.png"
           alt="Global"
-          class="mx-auto mt-24"
+          class="mx-auto mt-14 sm:mt-24"
         />
         <img src="./images/Sponsored.png" alt="Sponsors" />
       </section>
@@ -312,12 +333,12 @@
       >
         <div class="mt-5">
           <h3
-            class="text-4xl text-center capitalize font-medium w-full max-w-md mx-auto"
+            class="text-2xl sm:text-4xl sm:text-center capitalize font-medium w-full max-w-md mx-auto"
           >
             Trusted by Thousands of Happy Customer
           </h3>
           <p
-            class="text-gray-500 text-base text-center w-full max-w-lg mx-auto py-5"
+            class="text-gray-600 text-base sm:text-center w-full max-w-lg mx-auto py-5"
           >
             These are the stories of our customers who have joined us with great
             pleasure when using this crazy feature.
@@ -415,10 +436,10 @@
           </div>
         </div>
         <div
-          class="translate-y-[50%] bg-white flex justify-between items-center px-10 py-12 rounded-lg shadow-2xl shadow-gray-500/30"
+          class="my-10 sm:my-0 sm:translate-y-[50%] bg-white flex flex-col gap-10 sm:gap-0 sm:flex-row justify-between items-center px-10 py-12 rounded-lg shadow-2xl shadow-gray-500/30"
         >
           <div>
-            <h3 class="text-4xl text-bold">
+            <h3 class="text-2xl sm:text-4xl text-bold">
               Subscribe Now for <br />
               Get Special Features!
             </h3>
@@ -434,10 +455,12 @@
         </div>
       </section>
       <section
-        class="px-20 h-auto pt-[13%] pb-[5%] bg-slate-100 grid grid-rows-1 items-center"
+        class="px-3 sm:px-20 h-auto pt-[13%] pb-[5%] bg-slate-100 grid grid-rows-1 items-center"
       >
-        <div class="flex justify-between">
-          <div class="max-w-[320px]">
+        <div class="grid grid-cols-2 gap-8 sm:flex sm:justify-between">
+          <div
+            class="max-w-[320px] order-last col-span-2 sm:order-none sm:col-span-0"
+          >
             <div class="flex items-center space-x-1.5">
               <img src="./images/Logo.png" alt="Logo" class="h-8 w-8" />
               <h3 class="text-xl text-[#0B132]">
@@ -485,7 +508,7 @@
               <li>Terms of Service</li>
             </ul>
           </div>
-          <div>
+          <div class="col-span-2 sm:col-span-0">
             <h3 class="text-base text-[#0B132] font-bold">Earn Money</h3>
             <ul class="text-base text-gray-500 mt-3 space-y-2">
               <li>Affiliate</li>
